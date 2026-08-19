@@ -1,0 +1,10 @@
+{
+  "referenceSite": "https://kevinkaslana093.github.io/qixi-with-me-2026/",
+  "note": "These local media files are copies of public assets from the user-provided reference site. They are used as visual references and placeholders for the solo-mode chapters. Replace any asset for public commercial release if its license does not allow reuse.",
+  "assets": [
+    "game-ice.jpg", "game-comic.jpg", "game-red.jpg", "game-soft.jpg",
+    "ai-kimi.png", "ai-chatgpt.png", "ai-grok.png", "ai-doubao.png",
+    "ai-group.jpg", "ai-whale.jpg", "re0-1.jpg", "re0-2.jpg", "re0-3.jpg", "re0-4.jpg", "re0-5.jpg",
+    "intro.mp3", "genshin-start.mp4", "ai-shinjuku.mp4"
+  ]
+}

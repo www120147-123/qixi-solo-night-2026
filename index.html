@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b0d14" />
+    <meta name="description" content="鹊桥借我一晚：一个人的七夕，也可以有自己的银河。" />
+    <title>鹊桥借我一晚 · QIXI SOLO MODE</title>
+    <script type="module" crossorigin src="./assets/index-BdY6tx9p.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-2tRFQVFb.css">
+  </head>
+  <body>
+    <div id="app" class="app myth-mode">
+      <canvas id="starCanvas" class="star-canvas" aria-hidden="true"></canvas>
+      <div class="grain" aria-hidden="true"></div>
+
+      <header class="hud" aria-label="网站控制">
+        <button class="brand-button" data-action="home" aria-label="回到开场">
+          <span class="brand-mark">QIXI</span><span class="brand-symbol">∞</span>
+        </button>
+        <div class="hud-right">
+          <span id="chapterLabel" class="chapter-label">00 / MAGPIE BRIDGE</span>
+          <button id="soundToggle" class="icon-button" data-action="sound" aria-label="开启声音" aria-pressed="false">
+            <span class="sound-bars" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span id="soundText">SOUND OFF</span>
+          </button>
+        </div>
+      </header>
+
+      <nav id="chapterRail" class="chapter-rail" aria-label="章节导航">
+        <button class="rail-dot is-active" data-go="0" aria-label="前往开场"></button>
+        <button class="rail-dot" data-go="1" aria-label="前往鹊桥相会"></button>
+        <button class="rail-dot" data-go="2" aria-label="前往反转"></button>
+        <button class="rail-dot" data-go="3" aria-label="前往单人模式"></button>
+        <button class="rail-dot" data-go="4" aria-label="前往 AI 星"></button>
+        <button class="rail-dot" data-go="5" aria-label="前往游戏星"></button>
+        <button class="rail-dot" data-go="6" aria-label="前往动漫星"></button>
+        <button class="rail-dot" data-go="7" aria-label="前往城市星"></button>
+        <button class="rail-dot" data-go="8" aria-label="前往深空回收"></button>
+        <button class="rail-dot" data-go="9" aria-label="前往尾声"></button>
+      </nav>
+
+      <main id="experience" class="experience" tabindex="-1">
+        <section class="scene scene-loader is-active" data-scene="0" aria-labelledby="loaderTitle">
+          <div class="loader-orbit" aria-hidden="true"></div>
+          <div class="scene-content loader-content">
+            <p class="eyebrow">QIXI / SOLO MODE</p>
+            <h1 id="loaderTitle">鹊桥<br /><em>借我一晚。</em></h1>
+            <div class="loader-rule"><span id="loaderProgress"></span></div>
+            <p id="loaderStatus" class="mono-copy">正在为今晚寻找一座桥 · 0%</p>
+            <button class="primary-button" data-action="enter">进入七夕 <span>ENTER THE NIGHT</span></button>
+          </div>
+          <p class="scene-footnote">THEY HAVE A BRIDGE · YOU HAVE THE WHOLE NIGHT</p>
+        </section>
+
+        <section class="scene bridge-scene" data-scene="1" aria-labelledby="bridgeTitle">
+          <div class="bridge-sky" aria-hidden="true"></div>
+          <div class="milky-way" aria-hidden="true"></div>
+          <div class="bridge-stage" aria-hidden="true">
+            <div class="shore shore-left"><div class="paper-person cowherd"><span class="person-head"></span><span class="person-body"></span><span class="person-arm"></span></div></div>
+            <div class="shore shore-right"><div class="paper-person weaver"><span class="person-head"></span><span class="person-body"></span><span class="person-arm"></span></div></div>
+            <div class="magpie-bridge"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <div class="bridge-glow"></div>
+          </div>
+          <div class="scene-content bridge-copy">
+            <p class="eyebrow">01 / A VERY SERIOUS QIXI STORY</p>
+            <h2 id="bridgeTitle">一年只见一次的人，<br /><em>正在赶来。</em></h2>
+            <p class="lede">他们有银河，有月亮，还有一座准时出现的桥。</p>
+            <button class="round-button" data-action="next" aria-label="继续"><span>向前</span><b>↘</b></button>
+          </div>
+          <div class="bridge-caption">THE COWHERD · THE WEAVER · THE BRIDGE</div>
+        </section>
+
+        <section class="scene reversal-scene" data-scene="2" aria-labelledby="reversalTitle">
+          <div class="scanline" aria-hidden="true"></div>
+          <div class="freeze-bridge" aria-hidden="true"></div>
+          <div class="scene-content reversal-copy">
+            <p class="eyebrow">MEETING SUCCESSFUL</p>
+            <h2 id="reversalTitle">相会成功。<br /><em>那你的今晚呢？</em></h2>
+            <p class="lede">他们有鹊桥。你有整晚。</p>
+            <button class="primary-button inversion-button" data-action="solo">启动单人模式 <span>START SOLO MODE</span></button>
+          </div>
+          <div class="reversal-stamp">SYSTEM REFRAMED / 2026</div>
+        </section>
+
+        <section class="scene solo-lobby" data-scene="3" aria-labelledby="lobbyTitle">
+          <div class="scene-content lobby-copy">
+            <p class="eyebrow">03 / THE NIGHT IS STILL OPEN</p>
+            <h2 id="lobbyTitle">今晚仍有<br /><em>四个入口。</em></h2>
+            <p class="lede">没有人替你安排这场七夕。正好，今晚由你决定。</p>
+          </div>
+          <div class="orbit-system" aria-label="四个可探索的世界">
+            <button class="world-orbit world-ai" data-go="4"><img src="./assets/ref/ai-chatgpt.png" alt="AI 图标" /><span>AI</span><small>找个不会催你恋爱的人聊聊</small></button>
+            <button class="world-orbit world-game" data-go="5"><img src="./assets/ref/game-red.jpg" alt="游戏世界画面" /><span>GAME</span><small>先把现实暂停一会儿</small></button>
+            <button class="world-orbit world-anime" data-go="6"><img src="./assets/ref/re0-3.jpg" alt="动漫世界画面" /><span>ANIME</span><small>今晚的主角可以是你</small></button>
+            <button class="world-orbit world-city" data-go="7"><img src="./assets/ref/ai-whale.jpg" alt="夜晚的抽象鲸鱼画面" /><span>CITY</span><small>这座城市还没有睡</small></button>
+            <div class="orbit-core"><span id="starCount">0</span><small>STARS FOUND</small></div>
+          </div>
+        </section>
+
+        <section class="scene world-scene ai-scene" data-scene="4" aria-labelledby="aiTitle">
+          <div class="section-backdrop ai-backdrop" aria-hidden="true"></div>
+          <div class="scene-content world-copy">
+            <p class="eyebrow">04 / TALK TO THE UNKNOWN</p>
+            <h2 id="aiTitle">和未知<br /><em>聊一会儿。</em></h2>
+            <p class="lede">选一个今晚的 AI 朋友。它不负责把你变积极，只陪你把话说完。</p>
+          </div>
+          <div class="ai-grid" role="list">
+            <button class="ai-card" data-ai="吐槽家" aria-pressed="false"><img src="./assets/ref/ai-grok.png" alt="Grok" /><strong>吐槽家</strong><span>把无聊说得夸张一点</span></button>
+            <button class="ai-card" data-ai="倾听者" aria-pressed="false"><img src="./assets/ref/ai-kimi.png" alt="Kimi" /><strong>倾听者</strong><span>只问问题，不急着建议</span></button>
+            <button class="ai-card" data-ai="决策员" aria-pressed="false"><img src="./assets/ref/ai-doubao.png" alt="豆包" /><strong>决策员</strong><span>帮你选今晚第一站</span></button>
+            <button class="ai-card" data-ai="想象家" aria-pressed="false"><img src="./assets/ref/ai-group.jpg" alt="AI 想象世界" /><strong>想象家</strong><span>一起编一个不必发生的宇宙</span></button>
+          </div>
+          <div class="result-dock" id="aiResult" aria-live="polite"><span>选择一个角色，星星会亮起来。</span></div>
+        </section>
+
+        <section class="scene world-scene game-scene" data-scene="5" aria-labelledby="gameTitle">
+          <div class="game-grid-bg" aria-hidden="true"></div>
+          <div class="scene-content world-copy light-copy">
+            <p class="eyebrow">05 / ENTER ANOTHER WORLD</p>
+            <h2 id="gameTitle">先把现实<br /><em>暂停。</em></h2>
+            <p class="lede">给这颗能量球充满电。只要七秒，今晚就暂时属于你。</p>
+          </div>
+          <div class="game-stage">
+            <div class="media-stack" aria-hidden="true">
+              <img src="./assets/ref/game-ice.jpg" alt="" /><img src="./assets/ref/game-comic.jpg" alt="" /><img src="./assets/ref/game-soft.jpg" alt="" />
+            </div>
+            <button id="energyButton" class="energy-button" data-action="charge" aria-label="点击启动七秒充能"><span class="energy-ring"></span><strong>点击充能</strong><small>START 7-SECOND CHARGE</small></button>
+            <div id="energyStatus" class="energy-status">REALITY PAUSED · 00:00:00</div>
+          </div>
+        </section>
+
+        <section class="scene world-scene anime-scene" data-scene="6" aria-labelledby="animeTitle">
+          <div class="scene-content world-copy">
+            <p class="eyebrow">06 / TONIGHT, YOU ARE THE PROTAGONIST</p>
+            <h2 id="animeTitle">今晚的主角<br /><em>可以是你。</em></h2>
+            <p class="lede">拖动分镜，选一条属于你的频道。</p>
+          </div>
+          <div class="comic-stage" aria-label="动漫频道选择">
+            <button class="comic-frame frame-one"><img src="./assets/ref/re0-1.jpg" alt="动漫分镜一" /><span>热血番</span></button>
+            <button class="comic-frame frame-two"><img src="./assets/ref/re0-4.jpg" alt="动漫分镜二" /><span>治愈番</span></button>
+            <button class="comic-frame frame-three"><img src="./assets/ref/re0-5.jpg" alt="动漫分镜三" /><span>异世界</span></button>
+            <button id="mirrorButton" class="mirror-frame" data-action="mirror"><span>点击镜面</span><small>REWRITE THE SCENE</small></button>
+          </div>
+          <div id="animeResult" class="result-dock" aria-live="polite">拖动或点击一格分镜。</div>
+        </section>
+
+        <section class="scene world-scene city-scene" data-scene="7" aria-labelledby="cityTitle">
+          <div class="city-map" aria-hidden="true"><span class="map-line line-a"></span><span class="map-line line-b"></span><span class="map-line line-c"></span><span class="map-glow"></span></div>
+          <div class="scene-content world-copy light-copy">
+            <p class="eyebrow">07 / THE CITY IS STILL AWAKE</p>
+            <h2 id="cityTitle">这座城市<br /><em>还没有睡。</em></h2>
+            <p class="lede">选一条路线。今晚不用发朋友圈，走到哪里算哪里。</p>
+          </div>
+          <div class="route-list" role="list">
+            <button class="route-item" data-route="夜行者"><span>01</span><strong>出去走走</strong><small>街灯 · 天桥 · 河边</small></button>
+            <button class="route-item" data-route="生活家"><span>02</span><strong>点一顿好的</strong><small>菜单 · 收据 · 热气</small></button>
+            <button class="route-item" data-route="安静观测员"><span>03</span><strong>回家把灯打开</strong><small>耳机 · 电影 · 窗外</small></button>
+          </div>
+          <div id="cityResult" class="result-dock" aria-live="polite">选择一条路线，给今晚一个落点。</div>
+        </section>
+
+        <section class="scene deep-space-scene" data-scene="8" aria-labelledby="deepTitle">
+          <div class="scene-content deep-copy">
+            <p class="eyebrow">08 / BRING THE STARS HOME</p>
+            <h2 id="deepTitle">你刚刚经过的，<br /><em>不是四个栏目。</em></h2>
+            <p class="lede">是今晚的四种可能。拖动或点击星星，把它们送回中央。</p>
+          </div>
+          <div class="constellation" id="constellation" aria-label="拖动星星回到中央">
+            <span class="constellation-line line-1"></span><span class="constellation-line line-2"></span><span class="constellation-line line-3"></span>
+            <button class="constellation-star star-ai" data-star="AI" aria-label="拖动 AI 星">AI</button>
+            <button class="constellation-star star-game" data-star="GAME" aria-label="拖动游戏星">GAME</button>
+            <button class="constellation-star star-anime" data-star="ANIME" aria-label="拖动动漫星">ANIME</button>
+            <button class="constellation-star star-city" data-star="CITY" aria-label="拖动城市星">CITY</button>
+            <div class="bridge-rebuild" id="bridgeRebuild" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          </div>
+          <div id="constellationResult" class="result-dock">拖动或点击至少两颗星回到中央。</div>
+        </section>
+
+        <section class="scene outro-scene" data-scene="9" aria-labelledby="outroTitle">
+          <div class="outro-sky" aria-hidden="true"></div>
+          <div class="final-bridge" aria-hidden="true"><div class="final-person final-left"></div><div class="final-person final-right"></div><div class="final-bridge-line"></div></div>
+          <div class="scene-content outro-copy">
+            <p class="eyebrow">09 / MEETING YOURSELF</p>
+            <h2 id="outroTitle">牛郎织女每年<br /><em>相会一次。</em></h2>
+            <p class="final-line">我今晚，先和自己见面。</p>
+            <div class="outro-actions">
+              <button class="primary-button" data-action="share">保存今晚的星图 <span>SAVE THE NIGHT</span></button>
+              <button class="ghost-button" data-action="home">再走一次鹊桥 <span>REPLAY</span></button>
+            </div>
+          </div>
+          <p class="scene-footnote">QIXI IS NOT A TEST · TONIGHT, YOU WERE HERE</p>
+        </section>
+      </main>
+
+      <aside id="creditsPanel" class="credits-panel" aria-hidden="true">
+        <button class="icon-button close-credits" data-action="close-credits" aria-label="关闭素材说明">×</button>
+        <p class="eyebrow">MEDIA NOTES</p>
+        <h2>今晚的素材</h2>
+        <p>游戏、AI、动漫媒体来自你提供的参考站公开资源；鹊桥、星图和系统界面由网页代码完成。个人照片入口预留在 CITY 章节，当前版本不上传任何私密内容。</p>
+      </aside>
+
+      <div id="toast" class="toast" role="status" aria-live="polite"></div>
+      <audio id="introAudio" src="./assets/ref/intro.mp3" preload="metadata" loop></audio>
+    </div>
+  </body>
+</html>
