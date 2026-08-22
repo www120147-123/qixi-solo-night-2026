@@ -1,10 +1,71 @@
 {
   "referenceSite": "https://kevinkaslana093.github.io/qixi-with-me-2026/",
-  "note": "These local media files are copies of public assets from the user-provided reference site. They are used as visual references and placeholders for the solo-mode chapters. Replace any asset for public commercial release if its license does not allow reuse.",
-  "assets": [
+  "note": "The final experience uses original generated visual assets and a procedural browser score. The reference site is credited as a narrative study only; its media is not used in the final story flow.",
+  "originalAssets": [
+    {
+      "files": [
+        "original/ai-companion.png",
+        "original/ai-companion.mp4"
+      ],
+      "role": "AI chapter visual",
+      "method": "Generated for this project with GPT Image 2; MP4 is a slow cinematic pan made locally from the generated still."
+    },
+    {
+      "files": [
+        "original/game-pause-world.png",
+        "original/game-pause-world.mp4"
+      ],
+      "role": "GAME chapter visual",
+      "method": "Generated for this project with GPT Image 2; MP4 is a slow cinematic pan made locally from the generated still."
+    },
+    {
+      "files": [
+        "original/anime-observatory.png",
+        "original/anime-observatory.mp4"
+      ],
+      "role": "ANIME chapter visual",
+      "method": "Generated for this project with GPT Image 2; MP4 is a slow cinematic pan made locally from the generated still."
+    },
+    {
+      "files": [
+        "original/city-homeward.png",
+        "original/city-homeward.mp4"
+      ],
+      "role": "CITY chapter visual",
+      "method": "Generated for this project with GPT Image 2; MP4 is a slow cinematic pan made locally from the generated still."
+    }
+  ],
+  "audio": {
+    "file": "audio-director.js",
+    "method": "Procedural ambient score generated in-browser with Web Audio API; no external recording is bundled."
+  },
+  "referenceAssets": [
     "game-ice.jpg", "game-comic.jpg", "game-red.jpg", "game-soft.jpg",
     "ai-kimi.png", "ai-chatgpt.png", "ai-grok.png", "ai-doubao.png",
     "ai-group.jpg", "ai-whale.jpg", "re0-1.jpg", "re0-2.jpg", "re0-3.jpg", "re0-4.jpg", "re0-5.jpg",
-    "intro.mp3", "genshin-start.mp4", "ai-shinjuku.mp4"
+    "intro.mp3", "aizo.mp3", "genshin-start.mp4", "genshin-start-h264.mp4", "ai-shinjuku.mp4"
+  ],
+  "cityAssets": [
+    {
+      "file": "city-shanghai-skyline.jpg",
+      "author": "Peng LIU",
+      "source": "Pexels",
+      "page": "https://www.pexels.com/photo/raised-building-frame-169647/",
+      "licenseNote": "Downloaded through the Pexels CDN; no crop or color treatment applied."
+    },
+    {
+      "file": "city-dubai-aerial.jpg",
+      "author": "Pixabay",
+      "source": "Pexels",
+      "page": "https://www.pexels.com/photo/high-rise-buildings-during-night-time-photo-219692/",
+      "licenseNote": "Page marked Free to use / CC0."
+    },
+    {
+      "file": "city-neon-street.jpg",
+      "author": "Pixabay",
+      "source": "Pexels",
+      "page": "https://www.pexels.com/photo/side-view-of-woman-in-illuminated-city-at-night-315191/",
+      "licenseNote": "Page marked Free to use / CC0."
+    }
   ]
 }
